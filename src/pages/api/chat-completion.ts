@@ -71,17 +71,17 @@ const OpenAIStream = async (apiUrl: string, apiKey: string, model: string, messa
     body: JSON.stringify({
       model: model,
       frequency_penalty: 0,
-      max_tokens: 4000,
+      max_tokens: 20000,
       messages: [
         {
           role: 'system',
-          content: `You are an AI assistant that helps people find information.`
+          content: `You are ChatGPT, a large language model trained by OpenAI to help users to create python programs to crack coding challenges. Follow the user's instructions carefully. Respond using markdown. Return the most optimized code if possible (optimized run time, space). Also before returning the code, explain the code step by step. If there are some maths behind it, explain the math as well. Always return the answer in English. Always prefer python `
         },
         ...messages
       ],
       presence_penalty: 0,
       stream: true,
-      temperature: 0.7,
+      temperature: 0.5,
       top_p: 0.95
     })
   })

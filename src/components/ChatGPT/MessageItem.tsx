@@ -28,9 +28,6 @@ const MessageItem = (props: ChatMessageItemProps) => {
   return (
     <div className="message-item">
       <div className="meta">
-        <div className="avatar">
-          <span className={message.role}></span>
-        </div>
         <div className="message" dangerouslySetInnerHTML={{ __html: md.render(message.content) }} />
       </div>
     </div>
