@@ -5,7 +5,6 @@ import mdHighlight from 'markdown-it-highlightjs'
 import mdKatex from 'markdown-it-katex'
 
 import { ChatMessageItemProps } from './interface'
-import styles from './MessageItem.module.css' // Import the CSS file
 
 const md = MarkdownIt({ html: true }).use(mdKatex).use(mdHighlight)
 const fence = md.renderer.rules.fence!
@@ -27,9 +26,9 @@ const MessageItem = (props: ChatMessageItemProps) => {
   const { message } = props
 
   return (
-    <div className={styles.messageItem}>
+    <div className="message-item">
       <div className="meta">
-        <div className={styles.message} dangerouslySetInnerHTML={{ __html: md.render(message.content) }} />
+        <div className="message" dangerouslySetInnerHTML={{ __html: md.render(message.content) }} />
       </div>
     </div>
   )
