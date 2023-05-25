@@ -71,7 +71,7 @@ const OpenAIStream = async (apiUrl: string, apiKey: string, model: string, messa
     body: JSON.stringify({
       model: model,
       frequency_penalty: 0,
-      max_tokens: 10000,
+      max_tokens: 4000,
       messages: [
         {
           role: 'system',
