@@ -12,7 +12,7 @@ const { Header } = Layout
 const HeaderBar = () => {
   return (
     <>
-      <Header className={styles.header}>
+      {/* <Header className={styles.header}>
         <div className={styles.logoBar}>
           <Link href="/">
             <img alt="logo" src="/logo192.png" />
@@ -31,7 +31,7 @@ const HeaderBar = () => {
           </span>
         </Space>
       </Header>
-      <div className={styles.vacancy} />
+      <div className={styles.vacancy} /> */}
     </>
   )
 }
